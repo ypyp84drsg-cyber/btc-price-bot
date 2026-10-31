@@ -2,7 +2,7 @@ name: BTC Price Bot
 
 on:
   schedule:
-    - cron: '0 9 * * *'     # every day at 09:00 UTC
+    - cron: '*/5 * * * *'   # every 5 minutes
   workflow_dispatch:         # allows manual run from the Actions tab
 
 jobs:
