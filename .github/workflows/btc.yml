@@ -2,19 +2,22 @@ name: BTC Price Bot
 
 on:
   schedule:
-    - cron: '*/15 * * * *'   # every 15 minutes
-  workflow_dispatch:         # allows manual run
+    - cron: '0 9 * * *'     # every day at 09:00 UTC
+  workflow_dispatch:         # allows manual run from the Actions tab
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Install requests
         run: pip install requests
+
       - name: Run bot
         run: python btc_bot.py
