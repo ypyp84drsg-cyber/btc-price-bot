@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
 
-TELEGRAM_TOKEN = "9268850431:AAExxS9BiH3CPpEaZLdO_5osmmqZty9-umM"
+TELEGRAM_TOKEN = "9268850431:AAGwUwcvRYwDNTECxXRBqPmmPEujS6eki4g"
 CHAT_ID = "7975050631"
 
 def get_btc_price():
